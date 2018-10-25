@@ -10,18 +10,21 @@ alert('Hi ' + userName + '! Let\'s play a game! Answer each question with YES/Ye
 var numberCorrect = 0;
 
 //first question
-var responseOne = prompt('Is purple my favorite color?');
-console.log('responseOne', responseOne);
-//force uppercase
-var uppercaseResponseOne = responseOne.toUpperCase();
-console.log('uppercaseResponseOne', uppercaseResponseOne);
-//first answer
-if (uppercaseResponseOne === 'YES' || uppercaseResponseOne === 'Y'){
-  alert('Correct! I love purple!');
-  numberCorrect++;
-} else {
-  alert('Sorry! I love purple! Better luck next time!');
+function firstQuestion() {
+  var responseOne = prompt('Is purple my favorite color?');
+  console.log('responseOne', responseOne);
+  //force uppercase
+  var uppercaseResponseOne = responseOne.toUpperCase();
+  console.log('uppercaseResponseOne', uppercaseResponseOne);
+  //first answer
+  if (uppercaseResponseOne === 'YES' || uppercaseResponseOne === 'Y'){
+    alert('Correct! I love purple!');
+    numberCorrect++;
+  } else {
+    alert('Sorry! I love purple! Better luck next time!');
+  }
 }
+firstQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //secondQuestion
