@@ -28,21 +28,24 @@ firstQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //secondQuestion
-var responseTwo = prompt('Do I like Eggplant?');
-console.log('responseTwo', responseTwo);
-//force uppercase
-var uppercaseResponseTwo = responseTwo.toUpperCase();
-console.log('uppercaseResponseTwo', uppercaseResponseTwo);
-//second answer
-if (uppercaseResponseTwo === 'YES' || uppercaseResponseTwo === 'Y' ){
-  alert('Sorry! I don\'t like eggplant! Better luck next time!');
-} else {
-  alert('You\'re right! I think eggplant is gross!');
-  numberCorrect++;
-}
+function secondQuestion(){
+  var responseTwo = prompt('Do I like Eggplant?');
+  console.log('responseTwo', responseTwo);
+  //force uppercase
+  var uppercaseResponseTwo = responseTwo.toUpperCase();
+  console.log('uppercaseResponseTwo', uppercaseResponseTwo);
+  //second answer
+  if (uppercaseResponseTwo === 'YES' || uppercaseResponseTwo === 'Y' ){
+    alert('Sorry! I don\'t like eggplant! Better luck next time!');
+  } else {
+    alert('You\'re right! I think eggplant is gross!');
+    numberCorrect++;
+  }
+} 
 console.log('numberCorrect', numberCorrect);
-
+secondQuestion();
 //third question
+
 var responseThree = prompt('Have I been to France?');
 console.log('responseThree', responseThree);
 //force uppercase
