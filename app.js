@@ -100,76 +100,82 @@ fifthQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //sixth question
-var myNumber = 17;
-console.log('myNumber', myNumber);
-var numberGuess = parseInt(prompt('Hey, ' + userName + ' can you guess my favorite number?'));
-//parseInt ==> typecast from string to number
+function sixthQuestion(){
+  var myNumber = 17;
+  console.log('myNumber', myNumber);
+  var numberGuess = parseInt(prompt('Hey, ' + userName + ' can you guess my favorite number?'));
+  //parseInt ==> typecast from string to number
 
-console.log('numberGuess', numberGuess);
-var counter = 0;
-console.log('coutner', counter);
-//if they guess wrong
-while (numberGuess !== myNumber && counter < 3) {
-  if (numberGuess > myNumber){
-    numberGuess = parseInt(prompt(numberGuess + ' is too high! Guess again!'));
-    counter++;
-    console.log('counter', counter);
-  } else if (numberGuess < myNumber) {
-    numberGuess = parseInt(prompt(numberGuess + ' is too low! Guess again!'));
-    counter++;
-    console.log('counter', counter);
-  } else {
-    numberGuess = parseInt(prompt('That\'s not a valid number! Please try again!'));
-  } //if the value given is not a number, tell them to get another number
-  //thanks Gwen!
+  console.log('numberGuess', numberGuess);
+  var counter = 0;
+  console.log('coutner', counter);
+  //if they guess wrong
+  while (numberGuess !== myNumber && counter < 3) {
+    if (numberGuess > myNumber){
+      numberGuess = parseInt(prompt(numberGuess + ' is too high! Guess again!'));
+      counter++;
+      console.log('counter', counter);
+    } else if (numberGuess < myNumber) {
+      numberGuess = parseInt(prompt(numberGuess + ' is too low! Guess again!'));
+      counter++;
+      console.log('counter', counter);
+    } else {
+      numberGuess = parseInt(prompt('That\'s not a valid number! Please try again!'));
+    } //if the value given is not a number, tell them to get another number
+    //thanks Gwen!
+  }
+  //if they guess right
+  if (numberGuess === myNumber && counter < 3) {
+    alert('Congrats! You guessed that ' + myNumber + ' is my number!');
+    numberCorrect++;
+  }
+  //if they run out of guesses
+  if (counter === 3) {
+    alert('Sorry! You\'re out of tries! My number was ' + myNumber + '!');
+  }
 }
-//if they guess right
-if (numberGuess === myNumber && counter < 3) {
-  alert('Congrats! You guessed that ' + myNumber + ' is my number!');
-  numberCorrect++;
-}
-//if they run out of guesses
-if (counter === 3) {
-  alert('Sorry! You\'re out of tries! My number was ' + myNumber + '!');
-}
-
+sixthQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //7th Question
-var myVacations = ['GREECE', 'ARUBA', 'BELIZE', 'BAHAMAS', 'ENGLAND', 'MEXICO', 'THE BAHAMAS' ];
-//ask question
-var vacation = prompt('Where have I been on vacation?');
-//force uppercase
-var vacationsUppercase = vacation.toUpperCase();
-console.log('vacation', vacation);
-console.log('vacationsUppercase', vacationsUppercase);
+function seventhQuestion(){
+  var myVacations = ['GREECE', 'ARUBA', 'BELIZE', 'BAHAMAS', 'ENGLAND', 'MEXICO', 'THE BAHAMAS' ];
+  //ask question
+  var vacation = prompt('Where have I been on vacation?');
+  //force uppercase
+  var vacationsUppercase = vacation.toUpperCase();
+  console.log('vacation', vacation);
+  console.log('vacationsUppercase', vacationsUppercase);
 
 
-var guesses = 0;
-var isCorrect = false; //is their answer correct? false=no true=yes
-while (guesses < 5 && isCorrect === false) {
-  for (var j = 0; j < myVacations.length; j++ ) {
-    if (vacationsUppercase === myVacations[j]){
-      isCorrect = true;
+  var guesses = 0;
+  var isCorrect = false; //is their answer correct? false=no true=yes
+  while (guesses < 5 && isCorrect === false) {
+    for (var j = 0; j < myVacations.length; j++ ) {
+      if (vacationsUppercase === myVacations[j]){
+        isCorrect = true;
+      }
     }
+    if (isCorrect === false){
+      vacation = prompt('Try Again!');
+      vacationsUppercase = vacation.toUpperCase();
+      console.log('vacation', vacation);
+      console.log('vacationsUppercase', vacationsUppercase);
+    }
+    guesses++;
   }
-  if (isCorrect === false){
-    vacation = prompt('Try Again!');
-    vacationsUppercase = vacation.toUpperCase();
-    console.log('vacation', vacation);
-    console.log('vacationsUppercase', vacationsUppercase);
+
+  if (isCorrect === true){
+    alert('Correct! I have been to Belize, Aruba, Mexico, The Bahamas, England and Greece');
+    numberCorrect++;
   }
-  guesses++;
-}
 
-if (isCorrect === true){
-  alert('Correct! I have been to Belize, Aruba, Mexico, The Bahamas, England and Greece');
-  numberCorrect++;
+  if (isCorrect === false && j >= 5) {
+    alert('Sorry! You\'re out of tries! I have been to Belize, Aruba, Mexico, The Bahamas, England and Greece');
+  }
 }
-
-if (isCorrect === false && j >= 5) {
-  alert('Sorry! You\'re out of tries! I have been to Belize, Aruba, Mexico, The Bahamas, England and Greece');
-}
+seventhQuestion();
+console.log('numberCorrect', numberCorrect);
 
 //Score card!!
 if (numberCorrect <= 3) {
