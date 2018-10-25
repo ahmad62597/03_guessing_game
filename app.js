@@ -42,37 +42,41 @@ function secondQuestion(){
     numberCorrect++;
   }
 } 
-console.log('numberCorrect', numberCorrect);
 secondQuestion();
-//third question
+console.log('numberCorrect', numberCorrect);
 
-var responseThree = prompt('Have I been to France?');
-console.log('responseThree', responseThree);
-//force uppercase
-var uppercaseResponseThree = responseThree.toUpperCase();
-console.log('uppercaseResponseThree', uppercaseResponseThree);
-//third answer
-if (uppercaseResponseThree === 'YES' || uppercaseResponseThree === 'Y'){
-  alert('Sorry! I haven\'t been to France. I want to go, though!');
-} else {
-  alert('Correct! I have not been to France!');
-  numberCorrect++;
+//third question
+function thirdQuestion () {
+  var responseThree = prompt('Have I been to France?');
+  console.log('responseThree', responseThree);
+  //force uppercase
+  var uppercaseResponseThree = responseThree.toUpperCase();
+  console.log('uppercaseResponseThree', uppercaseResponseThree);
+  //third answer
+  if (uppercaseResponseThree === 'YES' || uppercaseResponseThree === 'Y'){
+    alert('Sorry! I haven\'t been to France. I want to go, though!');
+  } else {
+    alert('Correct! I have not been to France!');
+    numberCorrect++;
+  }
 }
+thirdQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //fourth question
-var responseFour = prompt('Do I have a dog?');
-console.log('responseFour', responseFour);
-//force uppercase
-var uppercaseResponseFour = responseFour.toUpperCase();
-console.log('uppercaseResponseFour', uppercaseResponseFour);
-//fourth answer
-if (uppercaseResponseFour === 'YES' || uppercaseResponseFour === 'Y'){
-  alert('You\'re right! I do have a dog! His name is Zeus!');
-  numberCorrect++;
-} else {
-  alert('Sorry! I do have a dog! Better luck next time!');
-}
+
+  var responseFour = prompt('Do I have a dog?');
+  console.log('responseFour', responseFour);
+  //force uppercase
+  var uppercaseResponseFour = responseFour.toUpperCase();
+  console.log('uppercaseResponseFour', uppercaseResponseFour);
+  //fourth answer
+  if (uppercaseResponseFour === 'YES' || uppercaseResponseFour === 'Y'){
+    alert('You\'re right! I do have a dog! His name is Zeus!');
+    numberCorrect++;
+  } else {
+    alert('Sorry! I do have a dog! Better luck next time!');
+  }
 console.log('numberCorrect', numberCorrect);
 
 //fifth question
