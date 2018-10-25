@@ -64,7 +64,7 @@ thirdQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //fourth question
-
+function fourthQuestion(){
   var responseFour = prompt('Do I have a dog?');
   console.log('responseFour', responseFour);
   //force uppercase
@@ -77,9 +77,12 @@ console.log('numberCorrect', numberCorrect);
   } else {
     alert('Sorry! I do have a dog! Better luck next time!');
   }
+}
+fourthQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //fifth question
+
 var responseFive = prompt('Is summer my favorite season?');
 console.log('responseFive', responseFive);
 //force uppercase
