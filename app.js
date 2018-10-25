@@ -82,19 +82,21 @@ fourthQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //fifth question
-
-var responseFive = prompt('Is summer my favorite season?');
-console.log('responseFive', responseFive);
-//force uppercase
-var uppercaseResponseFive = responseFive.toUpperCase();
-console.log('uppercaseResponseFive', uppercaseResponseFive);
-//fifth answer
-if (uppercaseResponseFive === 'YES' || uppercaseResponseFive === 'Y'){
-  alert('Sorry! My favorite season is Fall, not Summer! Better luck next time!');
-} else {
-  alert('You\'re right! I prefer Fall to Summer!');
-  numberCorrect++;
-}
+function fifthQuestion(){
+  var responseFive = prompt('Is summer my favorite season?');
+  console.log('responseFive', responseFive);
+  //force uppercase
+  var uppercaseResponseFive = responseFive.toUpperCase();
+  console.log('uppercaseResponseFive', uppercaseResponseFive);
+  //fifth answer
+  if (uppercaseResponseFive === 'YES' || uppercaseResponseFive === 'Y'){
+    alert('Sorry! My favorite season is Fall, not Summer! Better luck next time!');
+  } else {
+    alert('You\'re right! I prefer Fall to Summer!');
+    numberCorrect++;
+  }
+} 
+fifthQuestion();
 console.log('numberCorrect', numberCorrect);
 
 //sixth question
